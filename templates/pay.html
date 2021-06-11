@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <title>Pay</title>
+</head>
+<body>
+    <div class="border d-flex align-items-center justify-content-center"
+         style="height: 350px;">
+        <form name="Pay" method="post" action="https://pay.piastrix.com/ru/pay" accept-charset="UTF-8">
+            <input type="hidden" name="amount" value="{{data.amount}}"/>
+            <input type="hidden" name="currency" value="{{data.currency}}"/>
+            <input type="hidden" name="shop_id" value="{{data.shop_id}}"/>
+            <input type="hidden" name="sign" value="{{data.sign}}"/>
+            <input type="hidden" name="shop_order_id" value="{{data.shop_order_id}}"/>
+            <input type="hidden" name="description" value="Test invoice"/>
+            <button type="submit" class="btn btn-primary btn-lg">Continue to checkout</button>
+        </form>
+    </div>
+</body>
+</html>
